@@ -27,7 +27,7 @@ export class FirestoreService {
   }
 
   //Actualiza un gato
-  public updateCat(documentId: string, data: {name?: string, urlImage?:string}) {
+  public updateCat(documentId: string, data: {nombre?: string, url?:string}) {
     return this.firestore.collection('cats').doc(documentId).set(data);
   }
 
