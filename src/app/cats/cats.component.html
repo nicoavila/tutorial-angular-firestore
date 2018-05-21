@@ -1,0 +1,35 @@
+<div class="grd">
+  <div class="grd-row">
+    <div class="grd-row-col-2">
+        <h1>🐱 Gatos 🐱</h1>
+
+        <form (ngSubmit)="newCat(newCatForm.value)" [formGroup]="newCatForm">
+          <input type="hidden" formControlName="id">
+
+          <label for="nombre">Nombre</label>
+          <input type="text" formControlName="nombre">
+
+          <label for="url_img">Imagen</label>
+          <input type="url" formControlName="url">
+
+          <input type="submit" class="btn--blue btn--add" [disabled]="!newCatForm.valid" [value]="(currentStatus == 1) ? 'Agregar' : 'Editar'">
+        </form>
+    </div>
+    <div class="grd-row-col-4">
+      <div class="cats_container">
+        <div class="media" *ngFor="let cat of cats">
+          <div class="media-figure">
+            <img [src]="cat.data.url">
+          </div>
+          <div class="media-body">
+            <p>{{cat.data.nombre}}</p>
+            <div class="btn--group">
+              <button class="btn--green btn--s btn1" (click)="editCat(cat.id)">Editar</button>
+              <button class="btn--red btn--s btn2" (click)="deleteCat(cat.id)">Eliminar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

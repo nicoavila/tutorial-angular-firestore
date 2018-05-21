@@ -1,27 +1,20 @@
-# TutorialAngularFirestore
+# Angular 6 y Firestore
+Respositorio con el código utilizado para la publicación [Angular 6 y Firestore](https://medium.com/angular-chile/angular-6-y-firestore-b7f270adcc96)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
+![Imagen Principal Artículo](http://nicoavila.s3.amazonaws.com/articulos/06_01angular-y-firestore.jpg)
 
-## Development server
+## Instalación
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Clonar el proyecto
 
-## Code scaffolding
+```git clone https://github.com/nicoavila/tutorial-angular-firestore.git```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. Ejecutar
 
-## Build
+```npm install```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+3. Configurar atributos del objeto **firestore** en el archivo ```environment.ts```
 
-## Running unit tests
+3. Servir la aplicación
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```ng serve```
