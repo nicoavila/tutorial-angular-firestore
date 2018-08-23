@@ -12,7 +12,7 @@ export class FirestoreService {
   ) {}
 
   //Crea un nuevo gato
-  public createCat(data: {nombre: string, url: string}) {
+  public createCat(data: any) {
     return this.firestore.collection('cats').add(data);
   }
 
@@ -27,7 +27,7 @@ export class FirestoreService {
   }
 
   //Actualiza un gato
-  public updateCat(documentId: string, data: {nombre?: string, url?:string}) {
+  public updateCat(documentId: string, data: any) {
     return this.firestore.collection('cats').doc(documentId).set(data);
   }
 

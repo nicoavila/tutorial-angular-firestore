@@ -9,6 +9,7 @@ import { FirestoreService } from '../services/firestore/firestore.service';
 })
 export class CatsComponent implements OnInit {
 
+  public documentId = null;
   public cats = [];
   public currentStatus = 1;
   public newCatForm = new FormGroup({
@@ -35,11 +36,12 @@ export class CatsComponent implements OnInit {
           id: catData.payload.doc.id,
           data: catData.payload.doc.data()
         });
-      })
+      });
     });
   }
 
-  public newCat(form, documentId = null) {
+  public newCat(form, documentId = this.documentId) {
+    console.log(`Status: ${this.currentStatus}`);
     if (this.currentStatus == 1) {
       let data = {
         nombre: form.nombre,
@@ -57,10 +59,10 @@ export class CatsComponent implements OnInit {
       });
     } else {
       let data = {
-        name: form.name,
+        nombre: form.nombre,
         url: form.url
       }
-      this.firestoreService.updateCat(form.id, form).then(() => {
+      this.firestoreService.updateCat(documentId, data).then(() => {
         this.currentStatus = 1;
         this.newCatForm.setValue({
           nombre: '',
@@ -77,6 +79,7 @@ export class CatsComponent implements OnInit {
   public editCat(documentId) {
     this.firestoreService.getCat(documentId).subscribe((cat) => {
       this.currentStatus = 2;
+      this.documentId = documentId;
       this.newCatForm.setValue({
         id: documentId,
         nombre: cat.payload.data().nombre,
