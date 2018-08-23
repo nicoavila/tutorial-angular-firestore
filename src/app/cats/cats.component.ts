@@ -77,7 +77,7 @@ export class CatsComponent implements OnInit {
   }
 
   public editCat(documentId) {
-    this.firestoreService.getCat(documentId).subscribe((cat) => {
+    let editSubscribe = this.firestoreService.getCat(documentId).subscribe((cat) => {
       this.currentStatus = 2;
       this.documentId = documentId;
       this.newCatForm.setValue({
@@ -85,6 +85,7 @@ export class CatsComponent implements OnInit {
         nombre: cat.payload.data().nombre,
         url: cat.payload.data().url
       });
+      editSubscribe.unsubscribe();
     });
   }
 
