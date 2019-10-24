@@ -1,5 +1,7 @@
-# Angular 6 y Firestore
-Respositorio con el código utilizado para la publicación [Angular 6 y Firestore](https://medium.com/angular-chile/angular-6-y-firestore-b7f270adcc96)
+# Angular 8 y Firestore
+Respositorio con el código utilizado para la publicación [Angular 8 y Firestore](https://medium.com/angular-chile/angular-6-y-firestore-b7f270adcc96)
+
+> **UPDATE 24/10/2019:**: Se ha actualizado el repositorio y artículo a Angular 8
 
 ![Imagen Principal Artículo](http://nicoavila.s3.amazonaws.com/articulos/06_01angular-y-firestore.jpg)
 

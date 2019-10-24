@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore';
-import { Observable } from 'rxjs';
+import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -11,27 +10,27 @@ export class FirestoreService {
     private firestore: AngularFirestore
   ) {}
 
-  //Crea un nuevo gato
+  // Crea un nuevo gato
   public createCat(data: any) {
     return this.firestore.collection('cats').add(data);
   }
 
-  //Obtiene un gato
+  // Obtiene un gato
   public getCat(documentId: string) {
     return this.firestore.collection('cats').doc(documentId).snapshotChanges();
   }
 
-  //Obtiene todos los gatos
+  // Obtiene todos los gatos
   public getCats() {
     return this.firestore.collection('cats').snapshotChanges();
   }
 
-  //Actualiza un gato
+  // Actualiza un gato
   public updateCat(documentId: string, data: any) {
     return this.firestore.collection('cats').doc(documentId).set(data);
   }
 
-  //Borra un gato
+  // Borra un gato
   public deleteCat(documentId: string) {
     return this.firestore.collection('cats').doc(documentId).delete();
   }

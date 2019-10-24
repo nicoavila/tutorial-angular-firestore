@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyBPIFM1ow1CeOBl31cErX2n-6hK9V-970k",
-    authDomain: "nicoavila-allpurpose.firebaseapp.com",
-    databaseURL: "https://nicoavila-allpurpose.firebaseio.com",
-    projectId: "nicoavila-allpurpose",
-    storageBucket: "nicoavila-allpurpose.appspot.com",
-    messagingSenderId: "687013559091"
+    apiKey: 'AIzaSyBPIFM1ow1CeOBl31cErX2n-6hK9V-970k',
+    authDomain: 'nicoavila-allpurpose.firebaseapp.com',
+    databaseURL: 'https://nicoavila-allpurpose.firebaseio.com',
+    projectId: 'nicoavila-allpurpose',
+    storageBucket: 'nicoavila-allpurpose.appspot.com',
+    messagingSenderId: '687013559091'
   }
 };
 
